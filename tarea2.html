@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="Style/styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Funciones</h1>
+    </header>
+    <main>
+        
+            <a href="./index.html" class="task-link">Inicio</a>
+        
+        <section id="intro">
+            <h2>¿Qué son las Funciones?</h2>
+            <p>Las <strong>Funciones</strong> son bloques de código diseñados para realizar una tarea específica. Se crean una sola vez y pueden utilizarse (o “llamarse”) tantas veces como sea necesario dentro de un programa. Su propósito principal es organizar, reutilizar y simplificar el código, permitiendo que los programas sean más claros, fáciles de mantener y menos propensos a errores. <br>
+                A continuacion te mostraré, explicaré y ejemplificaré las funciones mas utilizadas e importantes para poder comprender mejor su funcionamiento y aplicacion practica</p>
+            <ul>
+                <li>El nombre identifica a la función y permite llamarla desde cualquier parte del programa.</li>
+                <li>Una función puede recibir valores externos para trabajar con ellos. Por ejemplo, una función que calcula un promedio necesita recibir números.</li>
+                <li>Dentro de la función se escribe el código que define su comportamiento: cálculos, validaciones, transformaciones o cualquier operación necesaria.</li>
+                <li>Después de procesar la información, una función puede regresar un valor al lugar donde fue llamada.</li>
+                <li>Una vez creada, puede utilizarse muchas veces sin reescribir el código, lo que ahorra tiempo y aumenta la eficiencia.</li>
+
+            </ul>
+            
+        </section>
+
+        <section id="condicionales">
+            <h2>¿Por qué son importantes las funciones?</h2>
+            <p>Las funciones son importantes en la programación porque permiten reducir la repetición de código,
+                ya que una misma operación puede definirse una sola vez y reutilizarse en cualquier parte del programa.
+                Esto no solo ahorra tiempo, sino que también disminuye la posibilidad de errores al evitar copiar y pegar la misma lógica varias veces.
+                Además, contribuyen a una mejor organización, dividiendo proyectos complejos en bloques pequeños, claros y manejables.
+                También mejoran significativamente la legibilidad, facilitando que otros programadores (o incluso tú mismo en el futuro) comprendan rápidamente qué hace cada parte del sistema.
+                En conjunto, las funciones hacen que el código sea más limpio, eficiente y profesional.
+            </p>
+
+            <article class="control-structure">
+                <h3>1. Función simple (sin parámetros y sin retorno)</h3>
+                <p>Una función simple es aquella que no necesita recibir datos externos para realizar su tarea y tampoco devuelve un resultado al final de su ejecución. Su propósito suele ser ejecutar una acción directa y muy específica dentro del programa, como mostrar un mensaje, limpiar la pantalla o inicializar valores.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>fun nombreFuncion() {
+    // instrucciones
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+fun saludar() {
+    println("Hola, bienvenido!")
+}
+
+
+</code></pre>
+                </div>
+                <p>En esta funcion vemos que tiene como nombre "Saludar" por lo que es facil deducir que es lo que hará al ser llamada. En este caso al ser llamada la funcion se va a pintar por pantalla o consola un saludo "Hola, bienvenido".</p>
+            </article>
+
+            <article class="control-structure">
+                <h3>2. Función con parámetros</h3>
+                <p>Las funciones con parámetros permiten que los datos ingresados modifiquen el comportamiento interno de la función.
+                    Gracias a esto, la misma función puede generar diferentes salidas según los valores proporcionados.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>fun nombreFuncion(param1: Tipo, param2: Tipo) {
+    // instrucciones
+}
+
+</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+fun mostrarNombre(nombre: String) {
+    println("Tu nombre es $nombre")
+}
+
+
+</code></pre>
+                </div>
+                <p>La función mostrarNombre(nombre) recibe un dato externo y lo utiliza para personalizar su salida. 
+                    Esto permite que la función se comporte de manera diferente según el valor ingresado. Así, el mensaje cambia dependiendo del nombre que se le envíe.
+                </p>
+            </article>
+            
+
+            <article class="control-structure">
+                <h3>3. Función con retorno</h3>
+                <p>Una función con retorno es aquella que, después de ejecutar su lógica interna, produce y entrega un valor de vuelta al lugar donde fue llamada. Este retorno puede ser un número, un texto, un objeto o cualquier tipo de dato que el lenguaje permita.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>fun nombreFuncion(param: Tipo): TipoRetorno {
+    return valor
+}
+</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+fun sumar(a: Int, b: Int): Int {
+    return a + b
+}
+</code></pre>
+                </div>
+                <p>En este ejemplo podemos observar que la funcion tiene como parametros "a" y "b" y que ambos son de tipo entero (Int) una ves cerrada la funcion vemos que se agregan dos puntos ":"
+                     indicando que esta funcion va a retornar un valor, a continuacion podemos ver el tipo de dato que se va a retornar, en este caso es un entero  (Int) 
+                     las instrucciones de la funcion (return a + b) lo que quiere decir que el valor de "a" sumado con "b" será el valor a retornar de la duncion "sumar()".
+                    Es importante mencionar que en este tipo de funcion, al ser llamada la funcion los parametros no pueden quedar vacios</p>
+            </article>
+
+            <article class="control-structure">
+                <h3>4. Función con valores por defecto</h3>
+                <p>Las funciones con valores por defecto permiten definir parámetros que ya tienen un valor asignado si el usuario no proporciona uno al llamar a la función.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>fun nombreFuncion(param1: Tipo = valorPorDefecto, param2: Tipo = otroValor) {
+    // instrucciones
+}
+</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo(Kotlin):</h4>
+                    <pre><code>fun saludarUsuario(nombre: String = "Invitado") {
+    println("Hola, $nombre")
+}
+</code></pre>
+                </div>
+                <p>Las funciones con parámetros por defecto permiten llamar a la función sin especificar todos sus valores. 
+                    Es decir que a diferencia de la funcion anterior al ser llamada la funcion esta se puede dejar sin llenar su parametro por que por defecto mostrará "Invitado" </p>
+            </article> 
+      
+            <article class="control-structure">
+                <h3>5. Funciones que no devuelven nada (Until)</h3>
+                <p>Este tipo de función se utiliza cuando el objetivo no es generar un valor de retorno, sino realizar una acción concreta dentro del programa.
+                 Aunque internamente el lenguaje trata su retorno como Unit, esto simplemente significa que no se espera un resultado útil para reutilizar. 
+                 Estas funciones suelen encargarse de mostrar mensajes, actualizar datos visuales, modificar estados o ejecutar pasos de un proceso.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>fun nombreFuncion(param: Tipo): Unit {
+    // instrucciones
+}
+</code></pre>
+                </div>
+                    <div class="example">
+                        <h4>Ejemplo(Kotlin):</h4>
+                        <pre><code>fun imprimirMensaje(mensaje: String): Unit {
+    println(mensaje)
+}
+                        </code></pre>
+                </div>
+                    <p>
+                        En este ejemplo la función imprimirMensaje recibe un parámetro llamado "mensaje" de tipo String. 
+                        Después de los parámetros, vemos dos puntos “:” seguidos de Unit, lo que indica que la función no devuelve ningún valor. 
+                        Su único propósito es ejecutar la acción que está dentro de las llaves, en este caso println(mensaje), que imprime el mensaje en pantalla. Al llamarla, debemos enviar un valor para el parámetro “mensaje”, ya que no puede quedar vacío. 
+                        En resumen, es una función que realiza una tarea, pero no retorna ningún resultado.
+                    </p>
+            </article>
+            
+            <article class="control-structure">
+                <h3>Funciones lambda</h3>
+                <p>Una función lambda es una función sin nombre que puede almacenarse en variables y pasarse como argumento a otras funciones. 
+                    Su principal ventaja es permitir escribir acciones pequeñas y puntuales de manera rápida y compacta.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>val nombreLambda: (TipoEntrada) -> TipoSalida = { parametro ->
+    // instrucciones
+    valorRetornado
+}
+</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo(Kotlin):</h4>
+                    <pre><code>val cuadrado = { x: Int -> x * x }
+
+</code></pre>
+                </div>
+                <p>
+                    En este ejemplo podemos ver una función lambda llamada cuadrado, la cual recibe un parámetro x de tipo Int. 
+                    Después del parámetro aparece la flecha ->, que separa los datos de entrada de la operación que realizará la lambda. 
+                    En este caso, la expresión x * x indica que la función devolverá el resultado de multiplicar el valor recibido por sí mismo. 
+                    Como es una lambda, no es necesario escribir “return”, ya que la última expresión es automáticamente el valor que se retorna. 
+                </p>
+            </article>
+
+            
+
+        <section id="ejercicios">
+            <h2>Videos de Ejercicios Prácticos</h2>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/17S1oZCin17aqrXJE16ij4mFp9pwOMTo6/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
+                           
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    
+</body>
+</html>

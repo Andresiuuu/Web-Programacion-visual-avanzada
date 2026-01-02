@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencias de Control</title>
+    <link rel="stylesheet" href="Style/styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Sentencias de Control</h1>
+    </header>    
+    <main>        
+            <a href="index.html" class="task-link">Inicio</a> 
+
+        <section id="intro">
+            <h2>¿Qué son las Sentencias de Control?</h2>
+            <p>Las <strong>sentencias de control</strong> son estructuras fundamentales en programación que permiten alterar el flujo secuencial de ejecución de un programa. En lugar de ejecutar las instrucciones línea por línea de forma consecutiva, estas sentencias nos permiten:</p>
+            <ul>
+                <li>Tomar decisiones basadas en condiciones (condicionales)</li>
+                <li>Repetir bloques de código múltiples veces (bucles)</li>
+                <li>Saltar a diferentes partes del código según sea necesario</li>
+            </ul>
+            <div class="concept-box">
+                <h3>Concepto Fundamental</h3>
+                <p>Sin sentencias de control, los programas solo podrían ejecutar instrucciones en secuencia, sin capacidad de adaptarse a diferentes situaciones o automatizar tareas repetitivas.</p>
+            </div>
+        </section>
+
+        <section id="condicionales">
+            <h2>Sentencias Condicionales</h2>
+            <p>Las sentencias condicionales son estructuras de control que permiten a un programa tomar decisiones. Su función es evaluar una o varias condiciones lógicas (expresiones que resultan en true o false) y, según el resultado, ejecutar uno u otro bloque de código.
+            En otras palabras, permiten que el flujo del programa no sea lineal, sino que pueda adaptarse a diferentes situaciones o datos que vayan ocurriendo durante la ejecución. <br>
+            Gracias a las sentencias condicionales, un programa puede responder a cambios, validar información, evitar errores, o realizar acciones diferentes según los valores ingresados por el usuario, el estado de una variable o los resultados de un cálculo. <br> <br>
+            A continuacion se explicará cada sentencia condicional con un ejemplo simple y facil de entender. (Es importante mencionar que cada lenguaje tiene su sintaxis, sin embargo una vez entiendas el funcionamiento será facil aplicarlos independientemente del lenguaje de programacion)
+            </p>
+
+            <article class="control-structure">
+                <h3>1. Sentencia IF</h3>
+                <p>Ejecuta un bloque de código solo si una condición es verdadera, si no lo es, simplemente ignora el bloque dentro de la sentencia y continua con el codigo fuera del mismo.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>if (condición) {
+    // Código a ejecutar si la condición es verdadera
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+var edad = 18
+    if (edad >= 18) {
+    println("Eres mayor de edad")
+    }
+
+</code></pre>
+                </div>
+            </article>
+
+            <article class="control-structure">
+                <h3>2. Sentencia IF-ELSE</h3>
+                <p>Ejecuta un bloque si la condición es verdadera y otro bloque diferente si es falsa. <br>
+                A diferencia del anterior, aqui se designa un bloque de codigo para cuando la condicion sea verdadera y otro bloque para cuando sea falsa</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>if (condición) {
+    // Código si es verdadero
+} else {
+    // Código si es falso
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+var edad = 18
+if(edad >= 18){
+    println("Mayor de edad")
+}else{
+    println("Menor de edad")
+}
+</code></pre>
+                </div>
+                <p>En este ejemplo podemos observar que se le asigna el valor de 18 a la variable "edad", se usa la condicional if para verificar que el contenido de "edad" sea mayor o igual a 18 
+                    dependiendo de eso se ejecuta o no el bloque de codigo dentro de las llaves correspondientes a if, si el valor de "edad" fuese menor a 18, entonces pasa a ejecutarse el bloque de codigo dentro de las llaves que contiene "else".
+                </p>
+            </article>
+            
+
+            <article class="control-structure">
+                <h3>3. Sentencia ELSE IF </h3>
+                <p>Permite evaluar múltiples condiciones en secuencia. La estructura else if se utiliza cuando un único if no es suficiente para cubrir todas las posibilidades que se desean evaluar. Funciona como una extensión lógica del if, permitiendo que el programa considere condiciones adicionales si la primera no se cumple.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>if (condición1) {
+    // Código para condición1
+} else if (condición2) {
+    // Código para condición2
+} else {
+    // Código si ninguna condición se cumple
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+                    <pre><code>
+var nota = 85
+if (nota >= 90) {
+    println("Excelente")
+} else if (nota >= 70) {
+    println("Bueno");
+} else {
+    println("Necesitas mejorar");
+}</code></pre>
+                </div>
+                <p>En este ejemplo tenemos como variable "nota" la cual contiene un numero "85", luego se abre una condicional if y su condicion es que si el valor de nota (85) es mayor o igual a 90 (>= 90) se mostrará el siguiente mensaje "Excelente", luego tenemos la condicional else if la cual tiene como condicion que nota (85) sea mayor o igual a 70 (nota>=70) que al cumplirse mostraría el mensaje "Bueno", finalmente tenemos el else que es el encargado de mostrar "Necesitas mejorar" en caso de que no se cumplan ninguna de las condiciones anteriores. <br>
+                El mensaje que se muestra por logica es "Bueno" ya que nota contiene el valor de 85 y else if cumple con la condicion mientras que el primer if no. </p>
+            </article>
+
+            <article class="control-structure">
+                <h3>4. Sentencia SWITCH</h3>
+                <p>Un switch es una estructura de control utilizada para tomar decisiones basadas en el valor de una sola expresión. <br>
+En lugar de evaluar múltiples condiciones como en una cadena de if y else if, el switch compara un valor contra diferentes opciones posibles y ejecuta el bloque correspondiente a la coincidencia.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>switch (expresión) {
+    case valor1:
+        // Código para valor1
+        break;
+    case valor2:
+        // Código para valor2
+        break;
+    default:
+        // Código si no coincide ningún caso
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo(JavaScript):</h4>
+                    <pre><code>let dia = 3;
+switch (dia) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miércoles");
+        break;
+    default:
+        console.log("Otro día");
+}</code></pre>
+                </div>
+                <p>En este ejemplo nos vamos a basar en JavaScript porque en kotlin no existe el switch como tal, sin embargo "Switch" es mas conocido para los que estan comenzando con la programacion. <br>
+                En este ejemplo podemos observar que se declara la variable "Dia" y se le asigna un valor (3) despues se inicia un Switch la cual tomará a la variable "dia" como expresíon, es decir que
+                dependiendo de lo que contenga va a ser comparado con cada caso y ejecutar el comando que contenga lo mismo. Es decir que como la variable "dia" vale 3, lo que se va a ejecutar es el case 3: o sea, mostrar un mensaje que diga "Miercoles".</p>
+            </article>
+        </section>
+
+        <section id="bucles">
+            <h2>Sentencias de Bucle (Iterativas)</h2>
+            <p>Los bucles son estructuras de control que permiten ejecutar un mismo bloque de instrucciones de manera repetitiva, 
+            lo que evita tener que escribir el mismo código varias veces. 
+            Su funcionamiento se basa en evaluar una condición que determina si el ciclo debe continuar o detenerse. 
+            Mientras esa condición se mantenga verdadera, el bucle seguirá repitiendo sus operaciones.</p>
+
+            <article class="control-structure">
+                <h3>1. Bucle FOR</h3>
+                <p>Se usa cuando conocemos de antemano cuántas veces queremos repetir el código.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>for (inicialización; condición; incremento) {
+    // Código a repetir
+}</code></pre>
+                </div>
+                    <div class="example">
+                        <h4>Ejemplo(JavaScript):</h4>
+                        <pre><code>for (let i = 1; i <= 5; i++) {
+                            console.log("Iteración número: " + i);
+                            }  
+                        </code></pre>
+                </div>
+                    <p>En este ejemplo podemos observar que el ciclo FOR tiene tres partes principales separadas por punto y coma dentro de los paréntesis: <br>
+                        (let i = 1): Aquí se declara e inicializa la variable "i" (que funciona como contador) y se le asigna el valor inicial de 1. Esta parte se ejecuta una sola vez al comenzar el ciclo. <br>
+                        (i <= 5): Esta es la condición que se evalúa antes de cada repetición. El ciclo seguirá ejecutándose mientras "i" sea menor o igual a 5. Cuando "i" llegue a ser 6, la condición será falsa y el ciclo terminará. <br>
+                        (i++): Esta es la actualización que ocurre después de cada repetición. El i++ aumenta el valor de "i" en 1 unidad. Entonces "i" pasará de 1 a 2, luego de 2 a 3, y así sucesivamente. <br>
+                        Dentro de las llaves {} se coloca el código que queremos repetir. En este caso, console.log("Iteración número: " + i) mostrará en pantalla un mensaje con el número actual de la iteración.
+                        Es decir que como la variable "i" comienza en 1 y aumenta de uno en uno hasta llegar a 5, el ciclo se ejecutará exactamente 5 veces, mostrando los mensajes: "Iteración número: 1", "Iteración número: 2", "Iteración número: 3", "Iteración número: 4" y "Iteración número: 5".
+                    </p>
+            </article>
+            
+            <article class="control-structure">
+                <h3>2. Bucle WHILE (Mientras)</h3>
+                <p>Repite el código mientras una condición sea verdadera. La condición se evalúa antes de cada iteración.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>while (condición) {
+    // Código a repetir
+}</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo(JavaScript):</h4>
+                    <pre><code>
+                        let contador = 0;
+                        while (contador < 5) {
+                        console.log("Contador: " + contador);
+    contador++;
+    }
+</code></pre>
+                </div>
+                <p>En este ejemplo podemos observar que primero se declara la variable "contador" y se le asigna un valor inicial de 0. Esta variable será la que controle cuántas veces se repetirá el bucle. <br>
+                    Después se inicia el bucle WHILE que en español significa "mientras". Este bucle tomará la condición contador < 5 como expresión, es decir que mientras el valor de "contador" sea menor que 5, el código dentro de las llaves {} se seguirá ejecutando una y otra vez. <br>
+                    Dentro de las llaves encontramos dos instrucciones importantes: <br>
+                    La primera línea console.log("Contador: " + contador) muestra en pantalla un mensaje con el valor actual del contador. <br>
+                    La segunda línea contador++ aumenta el valor de "contador" en 1 unidad después de cada repetición. Esto es crucial porque sin esta línea, el contador siempre valdría 0 y el bucle se repetiría infinitamente. <br>
+                    Es decir que como la variable "contador" comienza en 0 y aumenta de uno en uno en cada repetición, el bucle se ejecutará cuando contador valga 0, 1, 2, 3 y 4. Cuando "contador" llegue a valer 5, la condición contador < 5 será falsa y el bucle terminará, mostrando los mensajes: "Contador: 0", "Contador: 1", "Contador: 2", "Contador: 3" y "Contador: 4".
+                </p>
+            </article>
+
+            <article class="control-structure">
+                <h3>3. Bucle DO-WHILE</h3>
+                <p>Similar a WHILE, pero garantiza que el código se ejecute al menos una vez, ya que la condición se evalúa después.</p>
+                <div class="syntax-box">
+                    <h4>Sintaxis:</h4>
+                    <pre><code>do {
+    // Código a repetir
+} while (condición);</code></pre>
+                </div>
+                <div class="example">
+                    <h4>Ejemplo(JavaScript):</h4>
+                    <pre><code>let numero = 0;
+do {
+    console.log("Número: " + numero);
+    numero++;
+} while (numero < 3);</code></pre>
+                </div>
+                <p>La diferencia importante con el bucle WHILE es que este bucle primero ejecuta el código y después evalúa la condición. Esto garantiza que el código dentro del bucle se ejecute al menos una vez, sin importar si la condición es verdadera o falsa desde el inicio. <br>
+                    La primera línea console.log("Número: " + numero) muestra en pantalla un mensaje con el valor actual de la variable "numero". <br>
+                    La segunda línea numero++ aumenta el valor de "numero" en 1 unidad después de cada repetición. <br>
+                    Al final, después de las llaves, encontramos while (numero < 3) que es la condición que se evalúa después de cada ejecución. Mientras "numero" sea menor que 3, el bucle volverá a ejecutarse.
+                </p>
+            </article>
+        </section>
+
+        <section id="ejercicios">
+            <h2>Videos de Ejercicios Prácticos</h2>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/17S1oZCin17aqrXJE16ij4mFp9pwOMTo6/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
+                           
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases del Proceso de Desarrollo de Software</title>
+    <link rel="stylesheet" href="Style/styles1.css">
+</head>
+<body>
+
+<header>
+    <h1>Fases del Proceso de Desarrollo de Software</h1>
+</header>
+
+<main>
+    <a href="./index.html" class="task-link">Inicio</a>
+
+    <!-- CONTACTO INICIAL -->
+    <section id="contacto">
+        <h2>1. Contacto Inicial con el Cliente</h2>
+        <p>En esta fase se establece el primer acercamiento con el cliente. El objetivo principal es conocer su necesidad, entender el contexto del proyecto y recopilar información preliminar que permitirá orientar las siguientes etapas del desarrollo.</p>
+
+        <article>
+            <h3>Realizar la primera reunión</h3>
+            <p>La primera reunión sirve para presentarse, comprender la idea general del proyecto y determinar qué problema necesita ser resuelto. Se recopila información base y se evalúa la viabilidad inicial. <br>
+                En este caso el contacto fue realizado con el dueño de una importadora de repuestos para moto, se hizo la primera reunion en presencial para recopilar los datos necesarios para el desarrollo de la solucion a su problema.
+            </p>
+        </article>
+
+        <article>
+            <h3>Escuchar qué necesita y por qué</h3>
+            <p>Es fundamental comprender no solo lo que el cliente quiere, sino también el motivo detrás de su necesidad. Esto permite diseñar una solución que realmente aporte valor al negocio o al usuario final. <br>
+            El cliente en este punto cuenta con un sistema poco fiable de registro de deudores que se basa en un archivo excel, el cual se almacena unicamente en la computadora utilizada en el establecimiento (tiene un respaldo en drive que se guarda cada que se realizan cambios) si bien es una
+            solucion, no es una solucion practica para para muchas situaciones.</p>
+        </article>
+
+        <article>
+            <h3>Hacer preguntas para entender el problema</h3>
+            <p>Se realizan preguntas claras y específicas para obtener detalles adicionales: quién usará el sistema, qué tareas debe automatizar, qué problemas actuales existen y qué espera el cliente de la solución. <br>
+                Despues de esa serie de preguntas tenemos muy claro el cuantas personas tendran acceso a modificaciones, visualizaciones, y actualizacion de datos dentro de la solucion por proponer.
+            </p>
+        </article>
+    </section>
+
+
+    <!-- LEVANTAMIENTO DE REQUISITOS -->
+    <section id="requisitos">
+        <h2>2. Levantamiento de Requisitos</h2>
+        <p>Esta fase consiste en recopilar y documentar toda la información necesaria para definir el comportamiento del sistema. Se describen las funciones, usuarios, restricciones y todos los elementos que formarán la base del proyecto.</p>
+
+        <article>
+            <h3>Identificar usuarios del sistema</h3>
+            <p>Se determina quiénes interactuarán con el sistema, clasificándolos según su rol: administrador, usuario general, supervisor, etc. Esto permite diseñar funciones adaptadas a cada tipo de usuario.</p>
+        </article>
+
+        <article>
+            <h3>Definir funciones principales y secundarias</h3>
+            <p>Las funciones principales son aquellas esenciales para el propósito del sistema; las secundarias complementan y facilitan la experiencia del usuario. Ambas deben ser documentadas con claridad. <br>
+                En este punto tenemos claro que el cliente necesita que en el sistema permita: <br>
+                <ul>
+                    <li>Tener una herarquia de roles</li>
+                    <li>Iniciar sesion para un acceso seguro</li>
+                    <li>Visualizar una lista con los deudores que maneja su establecimiento</li>
+                    <li>Visualizar la deuda que tiene cada deudor</li>
+                    <li>Permitir buscar a un deudor especifico</li>
+                    <li>Visualizar Nombres y detalles del cliente(Ciudad, monto de deuda)</li>
+                    <li>Permitir restar el valor de una deuda agregando un pago</li>
+                    <li>Cerrar sesion</li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>Especificar pantallas necesarias</h3>
+            <p>Se enumeran todas las pantallas o vistas necesarias, como formularios, paneles de control, menús, reportes o perfiles de usuario.</p>
+        </article>
+
+        <article>
+            <h3>Determinar qué datos se guardarán</h3>
+            <p>Se especifican los datos que el sistema almacenará, como información de usuarios, registros, transacciones, archivos, entre otros. <br>
+                En este caso los datos a considerar en este apartados serian: <br>
+                <ul>
+                    <li>Nombres de deudores</li>
+                    <li>Ciudad de deudores</li>
+                    <li>Monto de deudores</li>
+                    <li>Monto de deuda de cada deudor</li>
+
+                    
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>Establecer restricciones</h3>
+            <p>Se definen reglas obligatorias como permisos, accesos, límites del sistema, validaciones y requerimientos técnicos.</p>
+        </article>
+    </section>
+
+
+    <!-- ANÁLISIS DEL PROBLEMA -->
+    <section id="analisis">
+        <h2>3. Análisis del Problema</h2>
+        <p>En esta fase se estudia a profundidad la información recolectada para entender exactamente cómo debe funcionar el sistema y cómo debe procesar los datos. Se identifican procesos clave y la interacción entre ellos.</p>
+
+        <article>
+            <h3>Definir procesos y reglas de negocio</h3>
+            <p>Se describen paso a paso los procesos internos del sistema, así como las reglas que determinan su funcionamiento. Estas reglas deben estar alineadas a los objetivos del cliente.</p>
+        </article>
+
+        <article>
+            <h3>Crear diagramas de flujo</h3>
+            <p>Los diagramas de flujo permiten visualizar la lógica del sistema y cómo fluye la información entre procesos, ayudando a detectar problemas antes del desarrollo.</p>
+        </article>
+
+        <article>
+            <h3>Desarrollar casos de uso</h3>
+            <p>Los casos de uso describen cómo interactúan los usuarios con el sistema paso a paso. Esta herramienta es clave para asegurar que todas las funciones necesarias sean contempladas.</p>
+        </article>
+    </section>
+
+
+    <!-- DISEÑO DE LA SOLUCIÓN -->
+    <section id="diseno">
+        <h2>4. Diseño de la Solución</h2>
+        <p>En esta fase se crea la estructura visual y técnica del sistema. Se diseñan pantallas, prototipos y la arquitectura que dará soporte al software.</p>
+
+        <article>
+            <h3>Crear Wireframes (Bocetos)</h3>
+            <p>Los wireframes son bocetos simples que muestran la distribución de elementos en cada pantalla. Ayudan a visualizar la idea antes de hacer diseños detallados.</p>
+        </article>
+
+        <article>
+            <h3>Diseñar prototipos en Figma</h3>
+            <p>En Figma se desarrollan prototipos interactivos que representan cómo se verá y se comportará la aplicación. Esto permite validar la experiencia de usuario antes de programar.</p>
+        </article>
+
+        <article>
+            <h3>Definir arquitectura del sistema</h3>
+            <p>La arquitectura define cómo se organizarán los módulos, bases de datos, APIs y componentes tecnológicos que permitirán el correcto funcionamiento del sistema.</p>
+        </article>
+    </section>
+    <section id="Evidencia">
+        <h2>5. Evidencia de aprobacion del cliente</h2>
+        <div class="images-container">
+                <div class="image-card">
+                    <img src="./imagenes/captura1.png" alt="Styles">
+                    <p><strong>Presentacion al cliente del Figma</strong></p>
+                </div>
+        <div class="images-container">
+                <div class="image-card">
+                    <img src="./imagenes/captura2.png" alt="Styles">
+                    <p><strong>Presentacion al cliente del Figma</strong></p>
+                </div>
+        <div class="images-container">
+                <div class="image-card">
+                    <img src="./imagenes/confirmacion.png" alt="Styles">
+                    <p><strong>Confirmacion del cliente</strong></p>
+                </div>
+
+    </section>
+    <section>
+        <h2>Diseño figma</h2>
+        <div class="images-container">
+            <div class="image-card">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/u0eHyeI90aX0mohwgprnvE/Sin-t%C3%ADtulo?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <a href="https://www.figma.com/design/u0eHyeI90aX0mohwgprnvE/Sin-t%C3%ADtulo?node-id=0-1&t=iW23e8UlpYiq9qIs-1" class="task-link2">Ir a la paguina oficial</a>
+    </section>
+
+</main>
+
+<footer>
+    <p></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Orientada a Objetos</title>
+    <link rel="stylesheet" href="Style/styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Programación Orientada a Objetos</h1>
+    </header>
+    <main>
+        <a href="./index.html" class="task-link">Inicio</a>
+
+        <section id="intro">
+            <h2>¿Qué es la Programación Orientada a Objetos?</h2>
+            <p>La <strong>Programación Orientada a Objetos (POO)</strong> es un paradigma de programación que organiza el código en torno a entidades llamadas <strong>objetos</strong>, los cuales combinan datos y comportamientos. Este enfoque permite crear sistemas más ordenados, reutilizables y fáciles de mantener. Su principal objetivo es modelar elementos del mundo real para facilitar el desarrollo de software de manera clara y estructurada.</p>
+            <ul>
+                <li>Las clases actúan como plantillas o moldes que describen cómo serán los objetos.</li>
+                <li>Los objetos son instancias reales que contienen datos (atributos) y acciones (métodos).</li>
+                <li>La POO permite trabajar de manera modular dividiendo programas grandes en piezas más pequeñas.</li>
+                <li>Los cuatro pilares de la POO ayudan a crear software mantenible, seguro y flexible.</li>
+                <li>Gracias a la POO se pueden reutilizar estructuras completas mediante herencia y polimorfismo.</li>
+            </ul>
+        </section>
+
+        <section id="pilares">
+            <h2>Los 4 Pilares de la Programación Orientada a Objetos</h2>
+
+            <article class="control-structure">
+                <h3>1. Encapsulamiento</h3>
+                <p>El encapsulamiento consiste en proteger los datos de un objeto evitando que sean modificados directamente desde afuera. Esto se logra usando modificadores de acceso como <strong>private</strong> y métodos llamados getters y setters. Gracias a este principio, se controla quién puede interactuar con la información y cómo puede hacerlo, garantizando mayor seguridad y orden en el código.</p>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+<pre><code>class Persona {
+    private var nombre: String = ""
+
+    fun setNombre(n: String) {
+        nombre = n
+    }
+
+    fun getNombre(): String {
+        return nombre
+    }
+}
+</code></pre></div>
+<p>En este ejemplo la clase Persona posee un atributo privado llamado "nombre", lo que significa que no puede accederse directamente desde fuera de la clase. 
+    Para modificarlo o consultarlo se utilizan las funciones setNombre() y getNombre(). 
+    La primera recibe un parámetro "n" de tipo String y asigna ese valor al atributo interno, mientras que la segunda devuelve el nombre almacenado.</p>
+            </article>
+
+            <article class="control-structure">
+                <h3>2. Herencia</h3>
+                <p>La herencia permite crear clases nuevas basadas en clases existentes. Esto facilita la reutilización de código y permite construir jerarquías de clases donde las clases hijas heredan atributos y métodos de la clase padre. También permite extender funcionalidades sin reescribir código desde cero.</p>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+<pre><code>open class Animal {
+    fun comer() {
+        println("El animal está comiendo")
+    }
+}
+
+class Perro : Animal() {
+    fun ladrar() {
+        println("El perro ladra")
+    }
+}
+</code></pre></div>
+        <p>En este ejemplo la clase Animal se declara como open, lo que significa que puede ser utilizada como clase padre en un proceso de herencia. 
+            Dentro de ella se define la función comer(), que muestra un mensaje cuando se ejecuta. La clase Perro hereda de Animal usando : Animal(), 
+            por lo que obtiene automáticamente el comportamiento definido en la clase padre sin necesidad de reescribirlo. Además, Perro agrega su propia función ladrar(), 
+            ampliando las capacidades que recibió por herencia.
+
+En resumen, este ejemplo demuestra cómo la herencia permite reutilizar código de una clase base y complementarlo con nuevas funciones en la clase hija, haciendo el programa más organizado y modular.</p>
+            </article>
+
+            <article class="control-structure">
+                <h3>3. Polimorfismo</h3>
+                <p>El polimorfismo permite que un mismo método pueda comportarse de diferentes maneras según el objeto que lo utilice. Esto hace posible que varias clases compartan métodos con nombres iguales, pero con comportamientos distintos. Facilita la extensibilidad y flexibilidad dentro de los programas.</p>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+<pre><code>open class Figura {
+    open fun area(): Double {
+        return 0.0
+    }
+}
+
+class Cuadrado(val lado: Double) : Figura() {
+    override fun area() = lado * lado
+}
+
+class Circulo(val radio: Double) : Figura() {
+    override fun area() = 3.14 * radio * radio
+}
+</code></pre></div>
+            <p>En este ejemplo la clase Figura actúa como clase base y contiene una función area() marcada como open, permitiendo que las clases hijas la modifiquen. 
+                Esta función devuelve 0.0 por defecto. Luego, las clases Cuadrado y Circulo heredan de Figura y utilizan la palabra override para redefinir el comportamiento del método area() según cada forma: 
+                el cuadrado calcula lado * lado, mientras que el círculo usa la fórmula 3.14 * radio * radio. <br>
+                Este comportamiento distinto con el mismo método es precisamente lo que representa el polimorfismo: distintas clases pueden responder de manera diferente a una misma función heredada.
+            </p>
+</article>
+
+            <article class="control-structure">
+                <h3>4. Abstracción</h3>
+                <p>La abstracción se enfoca en ocultar detalles internos de funcionamiento y mostrar solo lo esencial. Permite crear modelos simples que representan conceptos complejos del mundo real. Las clases abstractas y las interfaces son herramientas claves para lograr este principio en la POO.</p>
+                <div class="example">
+                    <h4>Ejemplo (Kotlin):</h4>
+<pre><code>abstract class Vehiculo {
+    abstract fun encender()
+}
+
+class Auto : Vehiculo() {
+    override fun encender() {
+        println("El auto está encendido")
+    }
+}
+</code></pre></div>
+<p>
+    En este ejemplo la clase Vehiculo se declara como abstract, lo que significa que no puede ser instanciada directamente y que sirve como un modelo general para otros tipos de vehículos. 
+    Dentro de ella se define la función encender() también como abstracta, lo que indica que no tiene implementación y que cada clase hija estará obligada a proporcionarla. Luego, la clase Auto hereda de Vehiculo y usa override para implementar su propia versión del método, mostrando un mensaje en pantalla cuando se ejecuta. <br>
+    Este comportamiento se relaciona directamente con la abstracción, ya que se ocultan los detalles generales en una clase base y se deja que cada clase hija defina su funcionamiento específico.
+</p>
+</article>
+        </section>
+
+        <section id="clases-objetos">
+            <h2>¿Qué son las Clases y los Objetos?</h2>
+            <p>Las <strong>clases</strong> son estructuras que definen cómo será un objeto: qué datos tendrá (atributos) y qué acciones podrá realizar (métodos). Un <strong>objeto</strong> es una instancia creada a partir de una clase, es decir, una representación real que se puede usar dentro del programa. Mientras la clase es un molde, el objeto es el resultado que podemos utilizar.</p>
+            <div class="example">
+                <h4>Ejemplo (Kotlin):</h4>
+<pre><code>class Coche(val marca: String, val modelo: String) {
+    fun mostrarInfo() {
+        println("Coche: $marca $modelo")
+    }
+}
+
+val miCoche = Coche("Toyota", "Corolla")
+miCoche.mostrarInfo()
+</code></pre></div>
+<p>
+    En este ejemplo se define la clase Coche, la cual funciona como un molde que describe cómo serán sus objetos. 
+    La clase recibe dos parámetros, marca y modelo, que se convierten en atributos propios de cada coche que se cree. 
+    Dentro de la clase también encontramos la función mostrarInfo(), encargada de imprimir los datos del coche en pantalla. <br>
+    Luego se crea un objeto llamado miCoche usando la clase Coche como plantilla y proporcionando valores reales: “Toyota” y “Corolla”. Este objeto ya contiene sus propias características y puede ejecutar las funciones definidas en la clase. Cuando llamamos a miCoche.mostrarInfo(), se muestra la información específica de ese objeto.
+</p>
+</section>
+
+        <section id="ejercicios">
+            <h2>Videos de Ejercicios Prácticos</h2>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://drive.google.com/file/d/17S1oZCin17aqrXJE16ij4mFp9pwOMTo6/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

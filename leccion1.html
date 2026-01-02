@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actuación en Clases: Expresiones y Operadores</title>
+    <link rel="stylesheet" href="Style/styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Actuación en Clases</h1>
+    </header>
+
+    <main>
+        <a href="./index.html" class="task-link">Inicio</a>
+
+        <section id="intro">
+            <h2>¿Qué se muestra en esta pagína?</h2>
+            <p>
+                En esta pagína se pretende mostrar algunos de los temas que hemos estado aprendiendo a lo largo de la materia de <strong>Programacion visual avanzada</strong>
+                como el significado de una <strong>Expresión</strong> y  los <strong>Tipos de operadores</strong>.
+                Se mostrarán 5 ejercicios sobre funciones para su mejor entendimiento en donde se mostrará paso a paso su resolucion.
+            </p>
+            
+        </section>
+
+        <section id="intro">
+            <h2>¿Qué es una Expresión?</h2>
+            <p>Una <strong>expresión</strong> es cualquier combinación válida de valores, variables y operadores que produce un resultado. Las expresiones se utilizan para realizar cálculos, comparaciones y evaluaciones dentro de un programa o ejercicio matemático. Dependiendo del tipo de datos y operaciones, pueden producir resultados numéricos, booleanos o de texto.</p>
+            <ul>
+                <li><strong>Expresiones aritméticas:</strong> realizan operaciones matemáticas como suma o multiplicación.</li>
+                <div class="syntax-box">
+                    <pre><code>Ejemplo:
+8 + 5 * 2
+Resultado: 18
+(Primero se multiplica 5 × 2 = 10, luego 8 + 10 = 18)
+</code></pre>
+                </div>
+                <p>Las expresiones aritméticas son combinaciones de números, variables y operadores matemáticos como suma, resta, multiplicación o división. Su propósito es realizar cálculos que generen un resultado numérico. Estas expresiones siguen reglas de prioridad, por lo que primero se resuelven multiplicaciones y divisiones, antes que sumas y restas.</p>
+                <li><strong>Expresiones lógicas:</strong> evalúan condiciones que dan como resultado verdadero o falso.</li>
+                
+                <div class="syntax-box">
+                    <pre><code>Ejemplo:
+(10 > 3) && (5 < 2)
+Resultado: false
+(La segunda condición es falsa, por lo tanto el AND completo es false)
+</code></pre>
+</div>
+<p>as expresiones lógicas se encargan de evaluar condiciones usando operadores como AND (&&), OR (||) y NOT (!). Estas permiten combinar varias comparaciones y determinar si un conjunto de condiciones se cumple o no. El resultado también es un valor booleano. Son muy útiles en estructuras de control y validaciones.</p>
+                <li><strong>Expresiones relacionales:</strong> comparan valores para verificar relaciones como mayor o menor.</li>
+                <div class="syntax-box">
+                    <pre><code>Ejemplo:
+7 >= 4
+Resultado: true
+(Porque 7 es mayor o igual a 4)
+</code></pre>
+                </div>
+                <p>Estas expresiones son fundamentales en la toma de decisiones, ya que permiten saber si se cumple una condición dentro de un programa o ejercicio.</p>
+            </ul>
+        </section>
+
+        <section id="operadores">
+<h2>Tipos de Operadores</h2>
+
+
+<article>
+<h3>1. Operadores Aritméticos</h3>
+<p>Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. Son esenciales para crear expresiones que produzcan resultados numéricos.</p>
+<div class="syntax-box">
+<pre><code>Ejemplo:
+8 + 5 * 2
+Resultado: 18
+(Primero se multiplica 5 × 2 = 10, luego 8 + 10 = 18)
+</code></pre>
+</div>
+<p>Estos operadores siguen reglas de prioridad, donde las multiplicaciones y divisiones se ejecutan antes que las sumas y restas. Son útiles para cualquier cálculo que involucre valores numéricos.</p>
+</article>
+
+
+<article>
+<h3>2. Operadores Relacionales</h3>
+<p>Los operadores relacionales permiten comparar dos valores para determinar si existe una relación entre ellos, como igualdad o diferencia. Su resultado siempre es booleano: verdadero (true) o falso (false).</p>
+<div class="syntax-box">
+<pre><code>Ejemplo:
+7 >= 4
+Resultado: true
+(Porque 7 es mayor o igual a 4)
+</code></pre>
+</div>
+<p>Este tipo de expresiones es fundamental en estructuras condicionales como if, while o validaciones, ya que permiten determinar si una condición se cumple.</p>
+</article>
+
+
+<article>
+<h3>3. Operadores Lógicos</h3>
+<p>Los operadores lógicos permiten evaluar o combinar condiciones booleanas. Se emplean para crear expresiones más complejas que determinan si múltiples afirmaciones son verdaderas o falsas.</p>
+<div class="syntax-box">
+<pre><code>Ejemplo:
+(10 > 3) && (5 < 2)
+Resultado: false
+(La segunda condición es falsa, por lo tanto el AND completo es false)
+</code></pre>
+</div>
+<p>Estos operadores son esenciales para controles de flujo que requieren validar más de una condición al mismo tiempo, como decisiones compuestas o verificaciones avanzadas de datos.</p>
+</article>
+</section>
+
+        <section id="ejercicios">
+            <h2>5 Ejercicios sobre Funciones </h2>
+
+            <article>
+                <h3>Ejercicio 1: Suma de dos números</h3>
+                <div class="syntax-box">
+<pre><code>fun sumar(a: Int, b: Int): Int {
+    return a + b
+}</code></pre>
+                
+</code></pre>
+</div>
+<p>La función recibe dos números y retorna su suma. Si llamamos <code>sumar(4, 6)</code>, el resultado será 10.</p>
+            </article>
+
+            <article>
+                <h3>Ejercicio 2: Comprobar si un número es par</h3>
+<div class="syntax-box">
+<pre><code>fun esPar(n: Int): Boolean {
+    return n % 2 == 0
+}</code></pre>
+</div>
+                <p>La expresión <code>n % 2 == 0</code> determina si el número es divisible entre 2. Por ejemplo, <code>esPar(8)</code> retorna true.</p>
+            </article>
+
+            <article>
+                <h3>Ejercicio 3: Obtener el mayor de dos valores</h3>
+                <div class="syntax-box">
+<pre><code>fun mayor(a: Int, b: Int): Int {
+    return if (a > b) a else b
+}</code></pre>                
+</div>
+                <p>Comparando los valores, la función devuelve el mayor. Para <code>mayor(7, 3)</code>, el resultado será 7.</p>
+            </article>
+
+            <article>
+                <h3>Ejercicio 4: Calcular el área de un círculo</h3>
+<div class="syntax-box">
+<pre><code>fun areaCirculo(radio: Double): Double {
+    return 3.14 * radio * radio
+}</code></pre>                
+</div>
+
+                <p>Se usa la expresión matemática del área. Por ejemplo, <code>areaCirculo(2.0)</code> da como resultado 12.56.</p>
+            </article>
+
+            <article>
+                <h3>Ejercicio 5: Mostrar un saludo personalizado</h3>
+                <div class="syntax-box">
+<pre><code>fun saludar(nombre: String) {
+    println("Hola, $nombre!")
+}</code></pre>
+
+</div>
+
+                <p>La función imprime un mensaje utilizando el parámetro recibido. Llamar <code>saludar("Andres")</code> mostrará "Hola, Andres".</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+</body>
+</html>
